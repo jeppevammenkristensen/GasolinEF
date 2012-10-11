@@ -1,0 +1,36 @@
+﻿@model BenzinStationApp.Commands.AddPetrolPriceCommand
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.PetrolStationId)
+    
+    @Html.ValidationSummary(true)
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Unleaded92)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Unleaded92)
+        @Html.ValidationMessageFor(model => model.Unleaded92)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Unleader95)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Unleader95)
+        @Html.ValidationMessageFor(model => model.Unleader95)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Diesel)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Diesel)
+        @Html.ValidationMessageFor(model => model.Diesel)
+    </div>      
+        
+    <p>
+        <input type="submit" value="Create" />
+    </p>
+}
